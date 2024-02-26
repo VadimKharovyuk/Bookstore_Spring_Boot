@@ -1,6 +1,7 @@
 package com.bookStore.entity;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Column;
@@ -12,6 +13,7 @@ import javax.persistence.Table;
 @Table(name="MyBooks")
 @Getter
 @Setter
+@NoArgsConstructor
 public class MyBookList {
 	
 	@Id
@@ -19,10 +21,7 @@ public class MyBookList {
 	private String name;
 	private String author;
 	private String price;
-	public MyBookList() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+
 	public MyBookList(int id, String name, String author, String price) {
 		super();
 		this.id = id;
